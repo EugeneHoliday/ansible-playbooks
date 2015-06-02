@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  remote_user: root
+  vars:
+    - redis_bind: 127.0.0.1
+  roles:
+    - nginx
+    - mysql
+    - php
+    - elasticsearch
+    - nodejs
+    - redis
